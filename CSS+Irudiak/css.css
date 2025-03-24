@@ -1,0 +1,330 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+
+    #enpresaIzena {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #nabigazioBarra {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #aukerak {
+        display: none;
+        position: fixed; /* Fijo en la pantalla */
+        top: 0; /* Arriba del todo */
+        left: 0;
+        width: 45%; /* Ajusta el ancho según prefieras */
+        height: 100vh; /* Ocupará toda la altura de la pantalla */
+        background-color: rgb(127, 149, 221);
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        overflow-y: auto; /* Permite scroll si el contenido es grande */
+    }
+    
+
+    .header {
+        background-color: rgb(127, 149, 221);
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        position: relative;
+        padding-right: 5px;
+
+    }
+
+    #nabigazioBarra li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+
+    #menua {
+        font-size: 50px;
+        padding-left: 10%;
+    }
+
+
+    #login {
+        font-size: 35px;
+        float: right;
+    }
+
+    #erregistratu {
+        padding-left: 5px;
+        font-size: 35px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    #erregistroa {
+        text-align: center;
+    }
+
+    #erregistroForm {
+        text-align: center;
+    }
+
+    #erregistratuBotoia {
+        padding: 5px;
+        background-color: lightgreen;
+    }
+
+    input {
+        border: 1px solid black;
+    }
+
+    label {
+        font-size: 16px;
+
+    }
+
+    .kontuak {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #divBotoia {
+        text-align: center;
+    }
+
+    #saioaBotoia {
+        background-color: lightblue;
+        height: 30px;
+        width: 40%;
+    }
+
+    #saioaBotoia2 {
+        background-color: lightgreen;
+    }
+
+    #saioaHasiForm {
+        padding-left: 20px;
+    }
+
+    #hornitzaileBihurtzekoBotoia {
+        padding: 5px;
+        background-color: lightgreen;
+    }
+
+    #hornitzaileForm {
+        text-align: center;
+
+    }
+
+    #berriak {
+        text-align: center;
+
+    }
+
+    #produktuak {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .berria {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border: 1px solid gray;
+    }
+
+    .produktua {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        text-align: center;
+        background: #fff;
+    }
+
+    .berria h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+
+    .produktua h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .produktua p {
+        color: #333;
+        font-size: 16px;
+        margin: 10px 0 0;
+    }
+
+    .footer {
+        position: static;
+        background-color: lightgray;
+        color: rgb(3, 3, 3);
+        text-align: center;
+        padding: 4px;
+    }
+
+    .footer-content {
+        font-size: 11.7px;
+        text-align: center;
+        line-height: 0.6;
+    }
+
+    .sarreraTitulua1 {
+        text-align: center;
+    }
+
+    #zerAurkitu {
+        text-align: center;
+    }
+
+    .sarreraTitulua2 {
+        text-align: center;
+    }
+
+    #konpromisoa {
+        text-align: center;
+    }
+
+    #euskera {
+        width: 30px;
+        height: 30px;
+        float: right;
+    }
+
+    #ingelesa {
+        width: 33px;
+        height: 33px;
+        float: right;
+    }
+
+    .ikonoa {
+        font-size: 40px;
+        margin: auto;
+    }
+
+    #karritoa {
+        margin-left: 85%;
+        font-size: 20px;
+    }
+
+    .gehituSaskira {
+        background-color: lightgreen;
+    }
+
+    #saioaItxiLink {
+        color: #3907ea;
+        text-decoration: underline;
+    }
+
+    @media screen and (min-width: 480px) {
+
+        .header {
+            padding-bottom: 7px;
+        }
+
+        #aukerak {
+            top: 0px;
+            width: 15%;
+        }
+
+        #menua {
+            font-size: 70px;
+        }
+
+        #logoa {
+            width: 83px;
+            height: 83px;
+        }
+
+        #login {
+            font-size: 50px;
+            justify-content: right;
+        }
+
+        #zerAurkituLista {
+            text-align: center;
+            list-style-type: none;
+        }
+
+        #saioaHasiForm {
+            text-align: center;
+        }
+
+        #euskera {
+            width: 50px;
+            height: 50px;
+
+        }
+
+        #ingelesa {
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .kontuak {
+            margin-right: 0;
+        }
+
+
+        #erosketaBotoia {
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #filtro {
+            text-align: center;
+        }
+
+        #botoia {
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        #mota {
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        .ikonoa {
+            font-size: 60px;
+            margin-left: 20px;
+        }
+
+        #hornitzaileForm {
+            text-align: center;
+        }
+
+        #erregistroForm {
+            text-align: center;
+        }
+
+        #berrienIrudiak {
+            width: 250px;
+            height: 250px;
+        }
+
+        #karritoa {
+            margin-right: 50px;
+            font-size: 30px;
+        }
+
+    }

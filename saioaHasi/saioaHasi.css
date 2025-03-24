@@ -1,0 +1,15 @@
+.erregistratuLink {
+    color: #3907ea;
+    text-decoration: underline;
+   
+}
+.erregistratuLink:hover {
+    color: #f36417ae;
+    text-decoration: underline;
+}
+p {
+    text-align: center;
+}
+@media screen and (min-width: 480px) {
+   
+}
