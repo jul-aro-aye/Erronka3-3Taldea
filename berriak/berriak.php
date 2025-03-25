@@ -7,13 +7,15 @@ require_once("../db.php");
 $conn = konexioaSortu();
 
 
-$sql = "SELECT izenburua, textua, data FROM berria";
+$sql = "SELECT izenburua, informazioa, data FROM ekintza";
 $result = $conn->query($sql);
 
 $irudiak = [
-    "EkoTekno aurkezten du bere lehen mugikor ekologikoa" => "../CSS+Irudiak/MugikorEkologikoa.jpg",
-    "EkoTekno-k eguzki-kargagailu adimenduna merkaturatu du" => "../CSS+Irudiak/Eguzki-kargagailuAdimenduna.jpg",
-    "EkoTekno eta AI: adimen artifizial jasangarria garatzen" => "../CSS+Irudiak/AI.jpg",
+    "Jaialdi handia Bilboko kaleetan." => "../CSS+Irudiak/MugikorEkologikoa.jpg",
+    "Jazz musika Donostiako antzokietan." => "../CSS+Irudiak/Eguzki-kargagailuAdimenduna.jpg",
+    "Azoka tradizionala Gasteizko plazan." => "../CSS+Irudiak/AI.jpg",
+    "Entzierro ospetsua Iruñeko kaleetan." => "../CSS+Irudiak/AI.jpg",
+    "Musika eta dantza Barakaldon." => "../CSS+Irudiak/AI.jpg",
 
 ]
 
@@ -24,32 +26,33 @@ $irudiak = [
     <?php
     require_once "../head.php";
     ?>
-    <title>Berriak</title>
+    <title>Ekintzak</title>
 
 </head>
 
 <body>
     <div class="content-osoa">
-        <h1 id="enpresaIzena">EkoTekno</h1>
-        <div id="berriak">
+        <h1 id="enpresaIzena">AeroPark</h1>
+        <div id="ekintzak">
 
             <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $berrienIzenburu = $row["izenburua"];
+                    $ekintzenIzenburu = $row["izenburua"];
 
 
-                    $berrienIrudi = isset($irudiak[$berrienIzenburu]) ? $irudiak[$berrienIzenburu] : "img/default.jpg";
+                    $ekintzenIrudi = isset($irudiak[$ekintzenIzenburu]) ? $irudiak[$ekintzenIzenburu] : "img/default.jpg";
                     echo "<div class='berria'>";
-                    echo "<img src='" . $berrienIrudi . "' id='berrienIrudiak' height='150px' width='150px' alt='Berrien irudiak'" . htmlspecialchars($berrienIzenburu) . "'>";
+                    echo "<img src='" . $ekintzenIrudi . "' id='ekintzenIrudiak' height='150px' width='150px' alt='" . htmlspecialchars($ekintzenIzenburu) . "'>";
+
                     echo "<br><br>";
                     echo "<h3>" . htmlspecialchars($row["izenburua"]) . "</h3>";
-                    echo "<p>" . htmlspecialchars($row["textua"]) . "</p>";
+                    echo "<p>" . htmlspecialchars($row["informazioa"]) . "</p>";
                     echo "<p>" . htmlspecialchars($row["data"]) . "</p>";
                     echo "</div>";
                 }
             } else {
-                echo "<p>Ez daude produkturik.</p>";
+                echo "<p>Ez daude ekintzarik.</p>";
             }
 
 
