@@ -82,7 +82,8 @@
 
     #erregistratuBotoia {
         padding: 5px;
-        background-color: lightgreen;
+        background-color: #FFFFFF;
+        border: 2px solid #000000
     }
 
     input {

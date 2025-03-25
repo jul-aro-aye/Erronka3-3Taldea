@@ -7,7 +7,7 @@ if (isset($_GET["erabiltzailea"]) && isset($_GET["pasahitza"])) {
     $pasahitza = $_GET["pasahitza"];    
 
     $conn = konexioaSortu();
-    $sql = "SELECT erabiltzailea FROM 3erronka.bezeroa WHERE erabiltzailea=? AND pasahitza=?";
+    $sql = "SELECT erabiltzailea FROM bezeroa WHERE erabiltzailea=? AND pasahitza=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $erabiltzailea, $pasahitza);
     $stmt->execute();
