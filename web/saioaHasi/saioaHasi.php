@@ -19,7 +19,7 @@
 
     ?>
     <div class="content-osoa">
-        <h1 id="enpresaIzena">EkoTekno</h1>
+        <h1 id="enpresaIzena">AeroPark</h1>
 
         <form action="saioaHasi.php" method="POST" id="saioaHasiForm">
             <label for="erab">Erabiltzailea</label>
@@ -34,7 +34,7 @@
             </div>
 
         </form>
-        <p>Erregistratu nahi duzu? Klikatu hemen <a href="../erregistroOrria/erregistroOrria.php"
+        <p>Ez zaude erregistratuta? Klikatu hemen <a href="../erregistroOrria/erregistroOrria.php"
                 class="erregistratuLink">Erregistratu</a></p>
 
 

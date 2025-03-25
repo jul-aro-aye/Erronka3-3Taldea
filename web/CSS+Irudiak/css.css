@@ -8,6 +8,8 @@
 
     #enpresaIzena {
         text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 36px;
     }
 
     a {
@@ -22,20 +24,21 @@
     }
 
     #aukerak {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         display: none;
-        position: fixed; /* Fijo en la pantalla */
-        top: 0; /* Arriba del todo */
+        position: fixed; 
+        top: 0; 
         left: 0;
-        width: 45%; /* Ajusta el ancho según prefieras */
-        height: 100vh; /* Ocupará toda la altura de la pantalla */
-        background-color: rgb(127, 149, 221);
-        z-index: 1000; /* Asegura que esté por encima de otros elementos */
-        overflow-y: auto; /* Permite scroll si el contenido es grande */
+        width: 45%;
+        height: 100vh; 
+        background-color: rgb(237, 218, 160);
+        z-index: 1000; 
+        overflow-y: auto; 
     }
     
 
     .header {
-        background-color: rgb(127, 149, 221);
+        background-color: rgb(237, 218, 160);
         display: grid;
         grid-template-columns: 1fr 3fr;
         position: relative;
@@ -79,11 +82,13 @@
 
     #erregistratuBotoia {
         padding: 5px;
-        background-color: lightgreen;
+        background-color: #FFFFFF;
+        border: 2px solid #000000
     }
 
     input {
         border: 1px solid black;
+        border-radius: 8%;
     }
 
     label {
@@ -109,7 +114,8 @@
     }
 
     #saioaBotoia2 {
-        background-color: lightgreen;
+        background-color: #FFFFFF;
+        border: 2px solid #000000
     }
 
     #saioaHasiForm {
@@ -126,7 +132,7 @@
 
     }
 
-    #berriak {
+    #ekintzak {
         text-align: center;
 
     }
@@ -174,7 +180,7 @@
 
     .footer {
         position: static;
-        background-color: lightgray;
+        background-color: rgb(237, 218, 160);
         color: rgb(3, 3, 3);
         text-align: center;
         padding: 4px;

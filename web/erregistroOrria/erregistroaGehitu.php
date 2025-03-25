@@ -1,20 +1,24 @@
 <?php
 require_once("../db.php");
 
-$izenAbizenak = "";
+$izena = "";
+$abizenak = "";
 $erabiltzailea = "";
 $pasahitza = "";
 $telefonoa = "";
 $emaila = "";
-$jaio_urtea = "";
 
 if ($_POST["akzioa"] == "erregistroaGehitu") {
 
     $conn = konexioaSortu();
 
 
-    if (isset($_POST["izenAbizenak"]) && !empty($_POST["izenAbizenak"])) {
-        $izenAbizenak = $_POST["izenAbizenak"];
+    if (isset($_POST["izena"]) && !empty($_POST["izena"])) {
+        $izena = $_POST["izena"];
+    }
+    
+    if (isset($_POST["abizenak"]) && !empty($_POST["abizenak"])) {
+        $abizenak = $_POST["abizenak"];
     }
 
     if (isset($_POST["erabiltzailea"]) && !empty($_POST["erabiltzailea"])) {
@@ -25,19 +29,16 @@ if ($_POST["akzioa"] == "erregistroaGehitu") {
         $pasahitza = $_POST["pasahitza"];
     }
 
-    if (isset($_POST["telefono"]) && !empty($_POST["telefono"])) {
-        $telefonoa = $_POST["telefono"];
+    if (isset($_POST["telefonoa"]) && !empty($_POST["telefonoa"])) {
+        $telefonoa = $_POST["telefonoa"];
     }
 
     if (isset($_POST["emaila"]) && !empty($_POST["emaila"])) {
         $emaila = $_POST["emaila"];
     }
 
-    if (isset($_POST["jaio_urtea"]) && !empty($_POST["jaio_urtea"])) {
-        $jaio_urtea = $_POST["jaio_urtea"];
-    }
 
-    $kontsulta = "INSERT INTO bezeroa (izenAbizenak, erabiltzailea, pasahitza, telefonoa, emaila, jaio_urtea) VALUES ('$izenAbizenak', '$erabiltzailea', '$pasahitza', '$telefonoa', '$emaila','$jaio_urtea')";
+    $kontsulta = "INSERT INTO bezeroa (izena, abizenak, erabiltzailea, pasahitza, telefonoa, emaila) VALUES ('$izena','$abizenak', '$erabiltzailea', '$pasahitza', '$telefonoa', '$emaila')";
     $result = $conn->query($kontsulta);
 
     $egoera = [];
