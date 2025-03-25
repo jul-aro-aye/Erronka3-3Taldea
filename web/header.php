@@ -13,9 +13,9 @@ require_once "../saioaHasi/session.php";
             <br>
             <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Ezarpenak</a></li>
             <br>
-            <li><a class="berriak" href="../berriak/berriak.php">Hurrengo ekintzak</a></li>
+            <li><a class="ekintza" href="../ekintzak/ekintzak.php">Hurrengo ekintzak</a></li>
             <br>
-            <li><a class="konfigurazioa" href="../berriak/berriak.php">Konfigurazioa</a></li>
+            <li><a class="konfigurazioa" href="../ekintzak/ekintzak.php">Konfigurazioa</a></li>
 
         </ul>
     </div>
