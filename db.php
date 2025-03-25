@@ -6,7 +6,7 @@ function konexioaSortu()
     $zerbitzaria = "localhost";
     $erab = "root";
     $pasa = "1MG2024";
-    $dbIzena = "erronka2";
+    $dbIzena = "3erronka";
 
     $conn = new mysqli($zerbitzaria, $erab, $pasa, $dbIzena);
 

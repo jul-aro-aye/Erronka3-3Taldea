@@ -8,6 +8,8 @@
 
     #enpresaIzena {
         text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 36px;
     }
 
     a {
@@ -85,6 +87,7 @@
 
     input {
         border: 1px solid black;
+        border-radius: 8%;
     }
 
     label {
@@ -110,7 +113,8 @@
     }
 
     #saioaBotoia2 {
-        background-color: lightgreen;
+        background-color: #FFFFFF;
+        border: 2px solid #000000
     }
 
     #saioaHasiForm {
