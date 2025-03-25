@@ -8,11 +8,11 @@ require_once "../saioaHasi/session.php";
     </a>
     <div id="aukerak">
         <ul id="nabigazioBarra">
-            <li><a class="sarrera" href="../sarrera/sarrera.php">Sarrera</a></li><br>
-            <li><a class="produktuak" href="../produktuOrria/produktuOrria.php">Produktuak</a></li><br>
-            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Hornitzaile bihurtu</a></li>
+            <li><a class="sarrera" href="../sarrera/sarrera.php">Zerbitzuak</a></li><br>
+            <li><a class="produktuak" href="../produktuOrria/produktuOrria.php">Administrazioan sartu</a></li><br>
+            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Ezarpenak</a></li>
             <br>
-            <li><a class="berriak" href="../berriak/berriak.php">Berriak</a></li>
+            <li><a class="berriak" href="../berriak/berriak.php">Hurrengo ekintzak</a></li>
             <br>
             <li><a class="konfigurazioa" href="../berriak/berriak.php">Konfigurazioa</a></li>
 

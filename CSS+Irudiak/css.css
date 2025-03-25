@@ -22,15 +22,16 @@
     }
 
     #aukerak {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         display: none;
-        position: fixed; /* Fijo en la pantalla */
-        top: 0; /* Arriba del todo */
+        position: fixed; 
+        top: 0; 
         left: 0;
-        width: 45%; /* Ajusta el ancho según prefieras */
-        height: 100vh; /* Ocupará toda la altura de la pantalla */
+        width: 45%;
+        height: 100vh; 
         background-color: rgb(237, 218, 160);
-        z-index: 1000; /* Asegura que esté por encima de otros elementos */
-        overflow-y: auto; /* Permite scroll si el contenido es grande */
+        z-index: 1000; 
+        overflow-y: auto; 
     }
     
 
