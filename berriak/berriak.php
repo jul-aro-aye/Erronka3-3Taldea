@@ -7,15 +7,15 @@ require_once("../db.php");
 $conn = konexioaSortu();
 
 
-$sql = "SELECT izenburua, informazioa, data FROM ekintza";
+$sql = "SELECT izenburua, informazioa, data, idEkintza FROM ekintza";
 $result = $conn->query($sql);
 
 $irudiak = [
-    "Jaialdi handia Bilboko kaleetan." => "../CSS+Irudiak/MugikorEkologikoa.jpg",
-    "Jazz musika Donostiako antzokietan." => "../CSS+Irudiak/Eguzki-kargagailuAdimenduna.jpg",
-    "Azoka tradizionala Gasteizko plazan." => "../CSS+Irudiak/AI.jpg",
-    "Entzierro ospetsua Iruñeko kaleetan." => "../CSS+Irudiak/AI.jpg",
-    "Musika eta dantza Barakaldon." => "../CSS+Irudiak/AI.jpg",
+    1 => "../CSS+Irudiak/MugikorEkologikoa.jpg",
+    2 => "../CSS+Irudiak/Eguzki-kargagailuAdimenduna.jpg",
+    3 => "../CSS+Irudiak/AI.jpg",
+    4 => "../CSS+Irudiak/AI.jpg",
+    5 => "../CSS+Irudiak/AI.jpg",
 
 ]
 
@@ -39,9 +39,10 @@ $irudiak = [
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $ekintzenIzenburu = $row["izenburua"];
+                    $id = $row["idEkintza"];
 
 
-                    $ekintzenIrudi = isset($irudiak[$ekintzenIzenburu]) ? $irudiak[$ekintzenIzenburu] : "img/default.jpg";
+                    $ekintzenIrudi = isset($irudiak[$id]) ? $irudiak[$id] : "img/default.jpg";
                     echo "<div class='berria'>";
                     echo "<img src='" . $ekintzenIrudi . "' id='ekintzenIrudiak' height='150px' width='150px' alt='" . htmlspecialchars($ekintzenIzenburu) . "'>";
 
