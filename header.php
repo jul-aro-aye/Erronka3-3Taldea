@@ -8,8 +8,9 @@ require_once "../saioaHasi/session.php";
     </a>
     <div id="aukerak">
         <ul id="nabigazioBarra">
-            <li><a class="sarrera" href="../sarrera/sarrera.php">Zerbitzuak</a></li><br>
-            <li><a class="produktuak" href="../produktuOrria/produktuOrria.php">Administrazioan sartu</a></li><br>
+            <li><a class="produktuak" href="../produktuOrria/produktuOrria.php">Zerbitzuak</a></li><br>
+            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Administrazioan sartu</a></li>
+            <br>
             <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Ezarpenak</a></li>
             <br>
             <li><a class="berriak" href="../berriak/berriak.php">Hurrengo ekintzak</a></li>
@@ -36,27 +37,27 @@ require_once "../saioaHasi/session.php";
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script>
-   $(document).ready(function () {
-    $(".ikonoa").click(function (event) {
-        event.stopPropagation();
-        mugikorNabigazioa();
+    $(document).ready(function () {
+        $(".ikonoa").click(function (event) {
+            event.stopPropagation();
+            mugikorNabigazioa();
+        });
+
+        $("#aukerak").click(function (event) {
+            event.stopPropagation();
+        });
+
+        $(document).click(function () {
+            var ilara = document.getElementById("aukerak");
+            if (ilara.style.display === "block") {
+                ilara.style.display = "none";
+            }
+        });
     });
 
-    $("#aukerak").click(function (event) {
-        event.stopPropagation(); 
-    });
-
-    $(document).click(function () {
+    function mugikorNabigazioa() {
         var ilara = document.getElementById("aukerak");
-        if (ilara.style.display === "block") {
-            ilara.style.display = "none"; 
-        }
-    });
-});
-
-function mugikorNabigazioa() {
-    var ilara = document.getElementById("aukerak");
-    ilara.style.display = (ilara.style.display === "block") ? "none" : "block";
-}
+        ilara.style.display = (ilara.style.display === "block") ? "none" : "block";
+    }
 
 </script>
