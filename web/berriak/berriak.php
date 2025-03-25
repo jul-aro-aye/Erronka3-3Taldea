@@ -11,11 +11,11 @@ $sql = "SELECT izenburua, informazioa, data, idEkintza FROM ekintza";
 $result = $conn->query($sql);
 
 $irudiak = [
-    1 => "../CSS+Irudiak/MugikorEkologikoa.jpg",
-    2 => "../CSS+Irudiak/Eguzki-kargagailuAdimenduna.jpg",
-    3 => "../CSS+Irudiak/AI.jpg",
-    4 => "../CSS+Irudiak/AI.jpg",
-    5 => "../CSS+Irudiak/AI.jpg",
+    1 => "../CSS+Irudiak/AsteNagusia_Bilbo.jpg",
+    2 => "../CSS+Irudiak/Jazzaldia_Donostia.jpg",
+    3 => "../CSS+Irudiak/Azoka_Gazteiz.jpg",
+    4 => "../CSS+Irudiak/Sanferminak_Iruña.jpg",
+    5 => "../CSS+Irudiak/Jaiak_Barakaldo.jpg    ",
 
 ]
 
