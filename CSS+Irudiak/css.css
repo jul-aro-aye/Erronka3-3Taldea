@@ -4,6 +4,7 @@
         display: grid;
         grid-template-rows: auto 1fr auto;
         min-height: 100vh;
+        background-color: rgb(231, 228, 228);
     }
 
     #enpresaIzena {
@@ -331,6 +332,11 @@
         #karritoa {
             margin-right: 50px;
             font-size: 30px;
+        }
+
+        #ekintzenIrudiak {
+            width: 250px;
+            height: 250px;
         }
 
     }
