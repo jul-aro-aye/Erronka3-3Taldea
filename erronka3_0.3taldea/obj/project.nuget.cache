@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jyC9Vdm86zc=",
+  "dgSpecHash": "To0MWAyOXro=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexl\\source\\repos\\erronka3_0.3taldea\\erronka3_0.3taldea\\erronka3_0.3taldea.csproj",
+  "projectFilePath": "C:\\Users\\alexl\\Downloads\\Erronka3-3Taldea\\erronka3_0.3taldea\\erronka3_0.3taldea.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexl\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

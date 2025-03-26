@@ -31,37 +31,13 @@ namespace erronka3_0._3taldea
         {
             try
             {
-                // Obtener la conexión
-                MySqlConnection conexionDB = Conexioa.conexion();
+                Kontrol k = new Kontrol();
 
-                // Verificar si la conexión es válida
-                if (conexionDB == null)
+                Boolean loginEginDu = k.LoginEgin(txtNombre, txtPassword); 
+
+                if (loginEginDu)
                 {
-                    MessageBox.Show("Error al conectar con la base de datos.");
-                    return;
-                }
-
-                // Verifica si la conexión está cerrada antes de abrirla
-                if (conexionDB.State == System.Data.ConnectionState.Closed)
-                {
-                    conexionDB.Open();
-                }
-
-                // Crear el comando SQL con parámetros
-                MySqlCommand codigo = new MySqlCommand
-                {
-                    Connection = conexionDB,
-                    CommandText = "SELECT * FROM bezeroa WHERE erabiltzailea = @erabiltzailea AND pasahitza = @pasahitza"
-                };
-                codigo.Parameters.AddWithValue("@erabiltzailea", txtNombre.Text);
-                codigo.Parameters.AddWithValue("@pasahitza", txtPassword.Text);
-
-                // Ejecutar la consulta
-                MySqlDataReader leer = codigo.ExecuteReader();
-
-                if (leer.Read())
-                {
-                    MessageBox.Show("Login exitoso");
+                    MessageBox.Show("Logina ongi egina");
 
                     Logeatuta deitu = new Logeatuta();
                     deitu.Show(); // Corregido el error de mayúsculas en Show()
@@ -69,14 +45,11 @@ namespace erronka3_0._3taldea
                 }
                 else
                 {
-                    MessageBox.Show("Usuario o contraseña incorrectos");
+                    MessageBox.Show("Erabiltzailea edo Pasahitza ez dira zuzenak");
                     txtNombre.Clear();
                     txtPassword.Clear();
                 }
 
-                // Cerrar el lector y la conexión
-                leer.Close();
-                conexionDB.Close();
             }
             catch (Exception ex)
             {

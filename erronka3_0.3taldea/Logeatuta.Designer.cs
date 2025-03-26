@@ -101,6 +101,7 @@
             Controls.Add(label1);
             Name = "Logeatuta";
             Text = "Logeatuta";
+            Load += Logeatuta_Load;
             ResumeLayout(false);
             PerformLayout();
         }

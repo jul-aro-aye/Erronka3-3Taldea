@@ -31,5 +31,10 @@ namespace erronka3_0._3taldea
         {
             throw new NotImplementedException();
         }
+
+        private void Logeatuta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
