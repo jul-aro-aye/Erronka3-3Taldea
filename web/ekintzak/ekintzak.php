@@ -43,8 +43,8 @@ $irudiak = [
 
 
                     $ekintzenIrudi = isset($irudiak[$id]) ? $irudiak[$id] : "img/default.jpg";
-                    echo "<div class='berria'>";
-                    echo "<img src='" . $ekintzenIrudi . "' id='ekintzenIrudiak' height='150px' width='150px' alt='" . htmlspecialchars($ekintzenIzenburu) . "'>";
+                    echo "<div class='ekintzek'>";
+                    echo "<img src='" . $ekintzenIrudi . "' id='ekintzenIrudiak' height='150px' width='220px' alt='" . htmlspecialchars($ekintzenIzenburu) . "'>";
 
                     echo "<br><br>";
                     echo "<h3>" . htmlspecialchars($row["izenburua"]) . "</h3>";

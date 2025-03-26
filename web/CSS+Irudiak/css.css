@@ -147,10 +147,13 @@
     }
 
     .ekintza {
-        border: 1px solid #ddd;
         padding: 15px;
-        border: 1px solid gray;
     }
+    
+    .ekintzek {
+    border: 1px solid grey;
+    }
+
 
     .produktua {
         border: 1px solid #ddd;
@@ -335,7 +338,7 @@
         }
 
         #ekintzenIrudiak {
-            width: 250px;
+            width: 350px;
             height: 250px;
         }
 
