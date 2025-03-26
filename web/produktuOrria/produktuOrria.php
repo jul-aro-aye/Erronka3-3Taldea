@@ -76,7 +76,7 @@ $irudiak = [
                 $modalitateaResult = $conn->query($modalitateasql);
                 while ($modalitateaRow = $modalitateaResult->fetch_assoc()) {
                     $selected = ($modalitatea == $modalitateaRow['modalitatea']) ? 'selected' : '';
-                    echo "<option value='' " . htmlspecialchars($modalitateaRow['modalitatea']) . "' $selected>" . htmlspecialchars($modalitateaRow['modalitatea']) . "</option>";
+                    echo "<option value='" . htmlspecialchars($modalitateaRow['modalitatea']) . "' $selected>" . htmlspecialchars($modalitateaRow['modalitatea']) . "</option>";
                 }
                 ?>
             </select>  
