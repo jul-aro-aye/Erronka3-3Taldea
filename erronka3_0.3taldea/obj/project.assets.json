@@ -1613,11 +1613,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexl\\source\\repos\\erronka3_0.3taldea\\erronka3_0.3taldea\\erronka3_0.3taldea.csproj",
+      "projectUniqueName": "C:\\Users\\alexl\\Downloads\\Erronka3-3Taldea\\erronka3_0.3taldea\\erronka3_0.3taldea.csproj",
       "projectName": "erronka3_0.3taldea",
-      "projectPath": "C:\\Users\\alexl\\source\\repos\\erronka3_0.3taldea\\erronka3_0.3taldea\\erronka3_0.3taldea.csproj",
+      "projectPath": "C:\\Users\\alexl\\Downloads\\Erronka3-3Taldea\\erronka3_0.3taldea\\erronka3_0.3taldea.csproj",
       "packagesPath": "C:\\Users\\alexl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexl\\source\\repos\\erronka3_0.3taldea\\erronka3_0.3taldea\\obj\\",
+      "outputPath": "C:\\Users\\alexl\\Downloads\\Erronka3-3Taldea\\erronka3_0.3taldea\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexl\\AppData\\Roaming\\NuGet\\NuGet.Config",
