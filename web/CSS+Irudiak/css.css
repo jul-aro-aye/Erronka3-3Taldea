@@ -138,7 +138,7 @@
 
     }
 
-    #produktuak {
+    #barrakak {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
@@ -155,7 +155,7 @@
     }
 
 
-    .produktua {
+    .barraka {
         border: 1px solid #ddd;
         padding: 15px;
         border-radius: 10px;
@@ -171,12 +171,12 @@
     }
 
 
-    .produktua h3 {
+    .barraka h3 {
         margin: 0;
         font-size: 18px;
     }
 
-    .produktua p {
+    .barraka p {
         color: #333;
         font-size: 16px;
         margin: 10px 0 0;
