@@ -7,17 +7,8 @@ require_once("../db.php");
 $conn = konexioaSortu();
 
 
-$sql = "SELECT izenburua, informazioa, data, idEkintza FROM ekintza";
+$sql = "SELECT izenburua, informazioa, data, irudia FROM ekintza";
 $result = $conn->query($sql);
-
-$irudiak = [
-    1 => "../CSS+Irudiak/AsteNagusia_Bilbo.jpg",
-    2 => "../CSS+Irudiak/Jazzaldia_Donostia.jpg",
-    3 => "../CSS+Irudiak/Azoka_Gazteiz.jpg",
-    4 => "../CSS+Irudiak/Sanferminak_Iruña.jpg",
-    5 => "../CSS+Irudiak/Jaiak_Barakaldo.jpg    ",
-
-]
 
     ?>
 <html>
@@ -39,10 +30,8 @@ $irudiak = [
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $ekintzenIzenburu = $row["izenburua"];
-                    $id = $row["idEkintza"];
 
-
-                    $ekintzenIrudi = isset($irudiak[$id]) ? $irudiak[$id] : "img/default.jpg";
+                    $ekintzenIrudi = "../CSS+Irudiak/" . $row["irudia"];
                     echo "<div class='ekintzek'>";
                     echo "<img src='" . $ekintzenIrudi . "' id='ekintzenIrudiak' height='150px' width='220px' alt='" . htmlspecialchars($ekintzenIzenburu) . "'>";
 
