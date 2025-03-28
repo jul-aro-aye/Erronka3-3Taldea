@@ -57,7 +57,7 @@ $irudiak = [
  
 <head>
     <?php require_once("../head.php"); ?>
-    <title>Produktuak</title>
+    <title>Zerbitzuak</title>
  
 </head>
  
@@ -65,7 +65,7 @@ $irudiak = [
  
     <div class="content-osoa">
         <h1 id="enpresaIzena">AeroPark</h1>
-        <form id="filtro" method="GET" action="produktuOrria.php">
+        <form id="filtro" method="GET" action="zerbitzuOrria.php">
             <input type="text" name="izenaBilatu" placeholder="Barrakaren izena bilatu..." /><br>
  
             <label for="modalitatea">Modalitatea</label>
@@ -86,7 +86,7 @@ $irudiak = [
             <a href="karritoa.php"><i class="fa fa-shopping-cart" id="karritoa"><span
                         id="karrito-kopurua">0</span></i></a>
         </div>
-        <div id="barrakak">
+        <div id="zerbitzuak">
             <?php
             if ($emaitza->num_rows > 0) {
                 while ($row = $emaitza->fetch_assoc()) {
@@ -99,7 +99,7 @@ $irudiak = [
                         echo "<p>Modalitatea: " . htmlspecialchars($row["modalitatea"])."</p>";
                         echo "<p>Kapazitatea ". htmlspecialchars($row["kapazitatea"]). "</p>";
                         echo "<p>Prezioa: €" . number_format($row["prezioa"], 2) . "</p>";
-                        echo "<button class='gehituSaskira' data-izena='" . htmlspecialchars($row["izena"]) . "' data-prezioa='" . $row["prezioa"] . "'>Gehitu saskira</button>";
+                        echo "<button class='zerbitzuEskatu' data-izena='" . htmlspecialchars($row["izena"]) . "' data-prezioa='" . $row["prezioa"] . "'>Zerbitzua Eskatu</button>";
                         echo "</div>";
                     }
                 }

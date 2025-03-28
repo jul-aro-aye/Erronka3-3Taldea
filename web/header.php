@@ -1,25 +1,23 @@
 <?php
 require_once "../saioaHasi/session.php";
 ?>
-
+ 
 <div class="header">
     <a href="javascript:void(0);" class="ikonoa">
         <i class="fa fa-bars" id="irudia"></i>
     </a>
     <div id="aukerak">
         <ul id="nabigazioBarra">
-            <li><a class="produktuak" href="../produktuOrria/produktuOrria.php">Zerbitzuak</a></li><br>
-            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Administrazioan sartu</a></li>
-            <br>
-            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Ezarpenak</a></li>
+            <li><a class="produktuak" href="../zerbitzuOrria/zerbitzuOrria.php">Zerbitzuak</a></li><br>
+            <li><a class="hornitzailea" href="../administrazioanSartu/administrazioanSartu.php">Administrazioan sartu</a></li>
             <br>
             <li><a class="ekintza" href="../ekintzak/ekintzak.php">Hurrengo ekintzak</a></li>
             <br>
             <li><a class="konfigurazioa" href="../ekintzak/ekintzak.php">Konfigurazioa</a></li>
-
+ 
         </ul>
     </div>
-
+ 
     <div class="kontuak">
         <?php if (isset($_SESSION['erabiltzailea'])): ?>
             <a href="../saioaHasi/saioaItxi.php" id="saioaItxiLink">Saioa Itxi</a>
@@ -34,7 +32,7 @@ require_once "../saioaHasi/session.php";
         </a>
     </div>
 </div>
-
+ 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script>
     $(document).ready(function () {
@@ -42,11 +40,11 @@ require_once "../saioaHasi/session.php";
             event.stopPropagation();
             mugikorNabigazioa();
         });
-
+ 
         $("#aukerak").click(function (event) {
             event.stopPropagation();
         });
-
+ 
         $(document).click(function () {
             var ilara = document.getElementById("aukerak");
             if (ilara.style.display === "block") {
@@ -54,10 +52,10 @@ require_once "../saioaHasi/session.php";
             }
         });
     });
-
+ 
     function mugikorNabigazioa() {
         var ilara = document.getElementById("aukerak");
         ilara.style.display = (ilara.style.display === "block") ? "none" : "block";
     }
-
+ 
 </script>
