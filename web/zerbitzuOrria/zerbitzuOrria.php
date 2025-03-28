@@ -10,7 +10,7 @@ $modalitatea = isset($_GET['modalitatea']) ? $conn->real_escape_string($_GET['mo
 $bilatu = isset($_GET["izenaBilatu"]) ? htmlspecialchars($_GET["izenaBilatu"]) : '';
  
  
-$sql = "SELECT izena, modalitatea, kapazitatea, prezioa FROM barraka";
+$sql = "SELECT izena, modalitatea, kapazitatea, prezioa,irudia FROM barraka";
 if (!empty($modalitatea)) {
     $sql .= " WHERE modalitatea = '$modalitatea'";
 }
@@ -19,38 +19,6 @@ if (!empty($modalitatea)) {
  
 $emaitza = $conn->query($sql);
  
-$irudiak = [
-    "iPhone 12" => "../CSS+Irudiak/Iphone12.jpg",
-    "Galaxy S21" => "../CSS+Irudiak/GalaxyS21.jpg",
-    "ThinkPad X1 Carbon" => "../CSS+Irudiak/ThinkPad.jpg",
-    "MacBook Pro 13" => "../CSS+Irudiak/Macbook.jpg",
-    "iPad Air 4" => "../CSS+Irudiak/IpadAir4.jpg",
-    "Surface Pro 7" => "../CSS+Irudiak/Surface.jpg",
-    "PS5 Digital Edition" => "../CSS+Irudiak/PS5.jpg",
-    "Xbox Series X" => "../CSS+Irudiak/Xbox.jpg",
-    "Nintendo Switch" => "../CSS+Irudiak/Switch.jpg",
-    "Dell XPS 13" => "../CSS+Irudiak/Dell.jpg",
-    "OnePlus 9" => "../CSS+Irudiak/OnePlus.jpg",
-    "Google Pixel 6" => "../CSS+Irudiak/Pixel6.jpg",
-    "ASUS ROG Strix G15" => "../CSS+Irudiak/Asus.jpg",
-    "Google Pixel 9" => "../CSS+Irudiak/Pixel9.jpg",
-    "HP Spectre x360" => "../CSS+Irudiak/HP.jpg",
-    "Huawei Mate Pad" => "../CSS+Irudiak/Huawei.jpg",
-    "Xiaomi Redmi 12 pro" => "../CSS+Irudiak/Xiaomi.jpg",
-    "Asus Rog Ally X" => "../CSS+Irudiak/AllyX.jpg",
-    "Bose QuietComfort 45" => "../CSS+Irudiak/Bose.jpg",
-    "Galaxy S23" => "../CSS+Irudiak/GalaxyS23.jpg",
-    "PlayStation 4 Pro" => "../CSS+Irudiak/PS4.jpg",
-    "Xbox One" => "../CSS+Irudiak/XboxOne.jpg",
-    "HP EliteBook" => "../CSS+Irudiak/EliteBook.jpg",
-    "Lenovo Tab M10" => "../CSS+Irudiak/Lenovo.jpg",
-    "Honor MagicPad2" => "../CSS+Irudiak/Honor.jpg",
-    "Huawei FreeBuds" => "../CSS+Irudiak/FreeBuds.jpg",
-    "JBL Tune" => "../CSS+Irudiak/JBL.jpg",
-    "Play Station Vita" => "../CSS+Irudiak/PSVita.jpg",
-    "Poco M6" => "../CSS+Irudiak/Poco.jpg",
-    "Apple Airpods Pro" => "../CSS+Irudiak/Airpods.jpg"
-];
  
 ?>
 <html>
@@ -92,9 +60,9 @@ $irudiak = [
                 while ($row = $emaitza->fetch_assoc()) {
                     if (strpos(strtolower($row["izena"]), strtolower($bilatu)) !== false) {
                         $barrakaIzena = $row["izena"];
-                        $barrakaIrudi = isset($irudiak[$barrakaIzena]) ? $irudiak[$barrakaIzena] : "img/default.jpg";
+                        $barrakaIrudi = "../CSS+Irudiak/BarrakaIrudiak/". $row["irudia"];
                         echo "<div class='barraka'>";
-                        echo "<img src='" . $barrakaIrudi . "' height='100px' width='75px' alt='" . htmlspecialchars($barrakaIzena) . "'>";
+                        echo "<img src='" . $barrakaIrudi . "' height='140px' width='190px' alt='" . htmlspecialchars($barrakaIzena) . "'>";
                         echo "<h3>" . htmlspecialchars($row["izena"]) . "</h3>";
                         echo "<p>Modalitatea: " . htmlspecialchars($row["modalitatea"])."</p>";
                         echo "<p>Kapazitatea ". htmlspecialchars($row["kapazitatea"]). "</p>";
