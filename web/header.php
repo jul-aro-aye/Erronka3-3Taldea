@@ -13,7 +13,9 @@ require_once "../saioaHasi/session.php";
             <br>
             <li><a class="ekintza" href="../ekintzak/ekintzak.php">Hurrengo ekintzak</a></li>
             <br>
-            <li><a class="konfigurazioa" href="../ekintzak/ekintzak.php">Konfigurazioa</a></li>
+            <li><a class="ekintza" href="../balorazioa/balorazioa.php">Balorazioak</a></li>
+            <br>
+            <li><a class="konfigurazioa" href="../konfigurazioa/konfigurazioa.php">Konfigurazioa</a></li>
  
         </ul>
     </div>
