@@ -5,6 +5,7 @@ require_once("../header.php");
 require_once("../db.php");
  
 $conn = konexioaSortu();
+require_once("../konfigurazioa/layoutTop.php");
  
 $modalitatea = isset($_GET['modalitatea']) ? $conn->real_escape_string($_GET['modalitatea']) : '';
 $bilatu = isset($_GET["izenaBilatu"]) ? htmlspecialchars($_GET["izenaBilatu"]) : '';

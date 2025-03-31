@@ -5,7 +5,7 @@ require_once("../header.php");
 require_once("../db.php");
  
 $conn = konexioaSortu();
- 
+require_once("../konfigurazioa/layoutTop.php");
  
 $sql = "SELECT izenburua, informazioa, data, irudia FROM ekintza";
 $result = $conn->query($sql);

@@ -16,7 +16,7 @@
 
     require_once "../db.php";
     $conn = konexioaSortu();
-
+    require_once("../konfigurazioa/layoutTop.php");
     ?>
     <div class="content-osoa">
         <h1 id="enpresaIzena">AeroPark</h1>

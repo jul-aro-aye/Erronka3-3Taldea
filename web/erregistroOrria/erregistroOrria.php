@@ -11,6 +11,7 @@
 <body>
     <?php
     require_once("../header.php");
+    require_once("../konfigurazioa/layoutTop.php");
     ?>
     <div class="content-osoa">
     <h1 id="enpresaIzena">AeroPark</h1>

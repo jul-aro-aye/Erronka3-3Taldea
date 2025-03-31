@@ -1,56 +1,41 @@
 <?php
 require_once("../header.php");
- 
- 
 require_once("../db.php");
- 
 $conn = konexioaSortu();
+ 
+require_once("../konfigurazioa/layoutTop.php");
+ 
+$defaultMainColor = "#f1f2f9";
+$defaultFooterColor = "#808000";
+ 
+ 
+$config = simplexml_load_file('konf.xml');
+$mainColor = isset($config->mainColor) ? (string) $config->mainColor : $defaultMainColor;
+$footerColor = isset($config->footerColor) ? (string) $config->footerColor : $defaultFooterColor;
 ?>
 <html>
- 
 <head>
-    <?php
-    require_once "../head.php";
-    ?>
+    <?php require_once "../head.php"; ?>
     <title>Konfigurazioa</title>
- 
 </head>
- 
 <body>
     <div class="content-osoa">
         <h1 id="enpresaIzena">AeroPark</h1>
-        <?php
-        $config = simplexml_load_file('konf.xml');
-    ?>
-    <br><br>
-    <form action="konfigurazioaPost.php" method="POST" id="konfigurazioaForm">
-        <input type="hidden" value="changeConfig" name="action"/>
-        <div>
+        <br><br>
+        <form action="konfigurazioaPost.php" method="POST" id="konfigurazioaForm">
+            <input type="hidden" value="changeConfig" name="action"/>
             <div>
                 <label for="mainColor">Kolore nagusia:</label>
+                <input type="color" id="mainColor" name="mainColor" value="<?= $mainColor ?>" />
             </div>
-            <div>
-                <input type="color" id="mainColor" name="mainColor" value="<?=$config->mainColor?>" />
-            </div>
-        </div>
-        <div>
             <div>
                 <label for="footerColor">Footer kolorea:</label>
+                <input type="color" id="footerColor" name="footerColor" value="<?= $footerColor ?>" />
             </div>
-            <div>
-                <input type="color" id="footerColor" name="footerColor" value="<?=$config->footerColor?>" />
-            </div>
-        </div>
-        <button type="submit" id="konfigurazioaBotoia">Gorde</button>
-    </form>
- 
+            <button type="submit" id="konfigurazioaBotoia">Gorde</button>
+        </form>
     </div>
-    <?php
-    require_once "../footer.php";
- 
-    ?>
- 
- 
+    <?php require_once "../footer.php"; ?>
 </body>
- 
 </html>
+ 
