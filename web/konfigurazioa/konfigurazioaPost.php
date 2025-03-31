@@ -12,7 +12,7 @@ function changeConfig($inputValue)
     }
  
     $config->mainColor = $inputValue["mainColor"];
-    $config->footerColor = $inputValue["footerColor"];
+    $config->menuColor = $inputValue["menuColor"];
    
     if (!$config->asXML($xmlFile)) {
         die("Errorea: Ezin da XML fitxategia gorde.");
@@ -29,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     }
  
     $mainColor = $_POST['mainColor'] ?? '#f1f2f9';
-    $footerColor = $_POST['footerColor'] ?? '#808000';
+    $menuColor = $_POST['menuColor'] ?? '#808000';
    
     $config->mainColor = $mainColor;
-    $config->footerColor = $footerColor;
+    $config->menuColor = $menuColor;
  
     if (!$config->asXML($xmlFile)) {
         die("Errorea: Ezin izan da XML fitxategia gorde.");
@@ -43,4 +43,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     exit();
 }
 ?>
- 

@@ -6,12 +6,12 @@ $conn = konexioaSortu();
 require_once("../konfigurazioa/layoutTop.php");
  
 $defaultMainColor = "#f1f2f9";
-$defaultFooterColor = "#808000";
+$defaultMenuColor = "#dbdbdb";
  
  
 $config = simplexml_load_file('konf.xml');
 $mainColor = isset($config->mainColor) ? (string) $config->mainColor : $defaultMainColor;
-$footerColor = isset($config->footerColor) ? (string) $config->footerColor : $defaultFooterColor;
+$menuColor = isset($config->menuColor) ? (string) $config->menuColor : $defaultMenuColor;
 ?>
 <html>
 <head>
@@ -29,8 +29,8 @@ $footerColor = isset($config->footerColor) ? (string) $config->footerColor : $de
                 <input type="color" id="mainColor" name="mainColor" value="<?= $mainColor ?>" />
             </div>
             <div>
-                <label for="footerColor">Footer kolorea:</label>
-                <input type="color" id="footerColor" name="footerColor" value="<?= $footerColor ?>" />
+                <label for="menuColor">Menu kolorea:</label>
+                <input type="color" id="menuColor" name="menuColor" value="<?= $menuColor ?>" />
             </div>
             <button type="submit" id="konfigurazioaBotoia">Gorde</button>
         </form>
@@ -38,4 +38,3 @@ $footerColor = isset($config->footerColor) ? (string) $config->footerColor : $de
     <?php require_once "../footer.php"; ?>
 </body>
 </html>
- 

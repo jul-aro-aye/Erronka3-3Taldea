@@ -14,17 +14,17 @@
     //XMLko konfiguraziotik hartzen dute informazioa
     $config = simplexml_load_file('../konfigurazioa/konf.xml');
     $mainColor = $config->mainColor;
-    $footerColor = $config->footerColor;
+    $menuColor = $config->menuColor;
  
     ?>
  
     <style>
         :root {
             --mainColor: <?= $mainColor ?>;
-            --footerColor: <?= $footerColor ?>;
+            --menuColor: <?= $menuColor ?>;
         }
  
-        /* AZPIAN EGON BEAHR DA CSS-a mainColor eta footerColor erabiltzen dituztenak */
+        /* AZPIAN EGON BEAHR DA CSS-a mainColor eta menuColor erabiltzen dituztenak */
     </style>
     <!-- Internal -->
     <link href="../CSS+Irudiak/css.css" rel="stylesheet">
