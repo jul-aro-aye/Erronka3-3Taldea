@@ -157,7 +157,7 @@ label {
 }
  
 .ekintzek {
-border: 1px solid grey;
+    border: 1px solid grey;
 }
  
  
@@ -195,7 +195,7 @@ border: 1px solid grey;
     text-align: center;
     padding: 4px;
     background-color: var(--menuColor);
-   
+ 
 }
  
 .footer-content {
@@ -204,7 +204,7 @@ border: 1px solid grey;
     line-height: 0.6;
 }
  
-#footerIzenburua  {
+#footerIzenburua {
     font-size: 15px;
     margin-top: 10px;
 }
@@ -261,15 +261,48 @@ border: 1px solid grey;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+ 
 #konfigurazioaBotoia {
     background-color: rgb(248, 250, 251);
     border: 2px solid #000000;
     padding: 5px;
-    font-size:15px;
+    font-size: 15px;
     height: 30px;
     width: 40%;
 }
  
+.asterisco {
+    color: red;
+}
+ 
+#balorazioaForm {
+    text-align: center;
+}
+ 
+.star {
+    font-size: 30px;
+}
+ 
+.star:hover {
+    color: gold;
+    cursor: pointer;
+ 
+}
+ 
+#ratingValue {
+    display: none;
+  }
+ 
+  #balorazioa {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+ 
+  .barrakaIzena {
+    font-size: 20px;
+    margin-top: 10px;
+  }
 @media screen and (min-width: 480px) {
  
     .header {

@@ -6,7 +6,7 @@ $conn = konexioaSortu();
 require_once("../konfigurazioa/layoutTop.php");
  
 $defaultMainColor = "#f1f2f9";
-$defaultMenuColor = "#dbdbdb";
+$defaultMenuColor = "#f8f9a9";
  
  
 $config = simplexml_load_file('konf.xml');
@@ -38,3 +38,4 @@ $menuColor = isset($config->menuColor) ? (string) $config->menuColor : $defaultM
     <?php require_once "../footer.php"; ?>
 </body>
 </html>
+ 

@@ -63,7 +63,7 @@ $emaitza = $conn->query($sql);
                         $barrakaIzena = $row["izena"];
                         $barrakaIrudi = "../CSS+Irudiak/BarrakaIrudiak/". $row["irudia"];
                         echo "<div class='barraka'>";
-                        echo "<img src='" . $barrakaIrudi . "' height='140px' width='190px' alt='" . htmlspecialchars($barrakaIzena) . "'>";
+                        echo "<img src='" . $barrakaIrudi . "' height='140px' width='160px' alt='" . htmlspecialchars($barrakaIzena) . "'>";
                         echo "<h3>" . htmlspecialchars($row["izena"]) . "</h3>";
                         echo "<p>Modalitatea: " . htmlspecialchars($row["modalitatea"])."</p>";
                         echo "<p>Kapazitatea ". htmlspecialchars($row["kapazitatea"]). "</p>";
@@ -124,3 +124,4 @@ $emaitza = $conn->query($sql);
 </body>
  
 </html>
+ 
