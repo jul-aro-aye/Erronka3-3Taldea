@@ -9,14 +9,11 @@ require_once "../saioaHasi/session.php";
     <div id="aukerak">
         <ul id="nabigazioBarra">
             <li><a class="produktuak" href="../zerbitzuOrria/zerbitzuOrria.php">Zerbitzuak</a></li><br>
-            <li><a class="hornitzailea" href="../administrazioanSartu/administrazioanSartu.php">Administrazioan sartu</a></li>
-            <br>
-            <li><a class="ekintza" href="../ekintzak/ekintzak.php">Hurrengo ekintzak</a></li>
-            <br>
-            <li><a class="ekintza" href="../balorazioa/balorazioa.php">Balorazioak</a></li>
-            <br>
+            <li><a class="hornitzailea" href="../administrazioanSartu/administrazioanSartu.php">Administrazioan
+                    sartu</a></li><br>
+            <li><a class="ekintza" href="../ekintzak/ekintzak.php">Hurrengo ekintzak</a></li><br>
+            <li><a class="ekintza" href="../balorazioa/balorazioa.php">Balorazioak</a></li><br>
             <li><a class="konfigurazioa" href="../konfigurazioa/konfigurazioa.php">Konfigurazioa</a></li>
- 
         </ul>
     </div>
  
@@ -26,16 +23,59 @@ require_once "../saioaHasi/session.php";
         <?php else: ?>
             <a href="../saioaHasi/saioaHasi.php"><i class="fa fa-user" id="login"></i></a>
         <?php endif; ?>
-        <a href="../sarrera/sarrera.php">
-            <img src="../CSS+Irudiak/euskera.png" id="euskera" alt="Euskera">
-        </a>
-        <a href="../../ingelesez/sarrera/sarrera.php">
-            <img src="../CSS+Irudiak/ingelesa.jpg" id="ingelesa" alt="Ingelesa">
-        </a>
+        <button class="translate" data-lang="en">Euskera</button>
+        <button class="translate" data-lang="eu">Ingelesa</button>
+ 
+ 
     </div>
 </div>
  
-<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'eu', autoDisplay: false }, 'google_translate_element');
+    }
+ 
+    $(document).ready(function () {
+ 
+        $.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+ 
+ 
+        function changeLanguage(lang) {
+            var translateCookie = lang === 'eu' ? '/eu/en' : '/en/eu';
+            document.cookie = "googtrans=" + translateCookie + "; path=/; domain=" + window.location.hostname;
+            location.reload();
+        }
+ 
+ 
+        $(".translate").click(function () {
+            var lang = $(this).attr("data-lang");
+            changeLanguage(lang);
+        });
+ 
+ 
+        setInterval(function () {
+            $(".goog-te-banner-frame").hide();
+            $("iframe").contents().find(".goog-te-banner-frame").hide();
+        }, 500);
+    });
+</script>
+ 
+<script>
+    $(document).ready(function () {
+        function hideGoogleTranslateBanner() {
+            setInterval(function () {
+                $(".goog-te-banner-frame").hide();
+                $("iframe").contents().find(".goog-te-banner-frame").hide();
+                $("body").css("top", "0px");
+            }, 100);
+        }
+ 
+        hideGoogleTranslateBanner();
+    });
+</script>
+ 
 <script>
     $(document).ready(function () {
         $(".ikonoa").click(function (event) {
@@ -59,5 +99,30 @@ require_once "../saioaHasi/session.php";
         var ilara = document.getElementById("aukerak");
         ilara.style.display = (ilara.style.display === "block") ? "none" : "block";
     }
- 
 </script>
+ 
+<style>
+    body {
+        top: 0px !important;
+        position: relative !important;
+    }
+ 
+    .goog-te-banner-frame {
+        display: none !important;
+        height: 0px !important;
+    }
+ 
+    .goog-te-gadget-simple {
+        display: none !important;
+    }
+ 
+    iframe {
+        display: none !important;
+    }
+ 
+    .header {
+        height: 60px;
+        max-height: 60px;
+        overflow: hidden;
+    }
+</style>
