@@ -2,25 +2,25 @@
 require_once("../header.php");
 require_once("../db.php");
 $conn = konexioaSortu();
- 
+
 require_once("../konfigurazioa/layoutTop.php");
- 
- 
-$sql = "SELECT DISTINCT izena FROM barraka";
+
+
+$sql = "SELECT DISTINCT idBarraka,izena FROM barraka";
 $result = $conn->query($sql);
- 
+
 ?>
 <html>
- 
+
 <head>
     <?php require_once "../head.php"; ?>
     <title>Balorazioa</title>
 </head>
- 
+
 <body>
     <div class="content-osoa">
         <h1 id="enpresaIzena">AeroPark</h1>
-        <form action="" method="POST" id="balorazioaForm">
+        <form id="balorazioaForm">
             <label for="barrakaIzena" id="barrakaIzena">Aukeratu barraka bat:<span class="asterisco">*</span></label>
             <select name="barrakaIzena" class="barrakaIzena">
                 <option value="">-- Aukeratu --</option>
@@ -32,9 +32,9 @@ $result = $conn->query($sql);
                 } else {
                     echo '<option value="">Ez dago daturik</option>';
                 }
- 
+
                 ?>
- 
+
             </select>
             <br>
             <label for="balorazioa" id="balorazioa">Balorazioa<span class="asterisco">*</span>
@@ -51,22 +51,25 @@ $result = $conn->query($sql);
             <br>
             <label for="iruzkina" id="iruzkina">Iruzkinak:<span class="asterisco">*</span></label>
             <br>
-            <textarea name="iruzkina" id="iruzkina" rows="4" cols="20" placeholder="Idatzi iruzkina"></textarea>
+            <textarea name="iruzkina" class="iruzkina" rows="4" cols="20" placeholder="Idatzi iruzkina"></textarea>
             <br><br>
-            <button class="baloratuBotoia">Bidali</button>
+            <div id="baloratu">
+                <button id="baloratuBotoia">Bidali</button>
+            </div>
+
         </form>
     </div>
     <?php require_once "../footer.php"; ?>
- 
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- 
+
     <script>
         $(document).ready(function () {
             $(".star").click(function () {
-                let rating = $(this).data("value"); // Obtiene el valor de la estrella clickeada
-                $("#ratingValue").text(rating); // Muestra el valor seleccionado (puedes enviarlo en un formulario)
- 
-                // Ilumina todas las estrellas hasta la seleccionada
+                let rating = $(this).data("value");
+                $("#ratingValue").text(rating);
+
+
                 $(".star").each(function () {
                     let starValue = $(this).data("value");
                     if (starValue <= rating) {
@@ -77,11 +80,56 @@ $result = $conn->query($sql);
                 });
             });
         });
- 
+
     </script>
- 
+
+    <script>
+        $(document).ready(function () {
+
+            $('#baloratuBotoia').on('click', function (e) {
+                e.preventDefault();
+
+                var barrakaIzenaval = $(".barrakaIzena").val();
+                var izarKopuruaval = $("#ratingValue").text().trim();
+                var iruzkinakval = $(".iruzkina").val().trim();
+
+                console.log("Bidalitako datuak:", {
+                    "akzioa": "balorazioaGehitu",
+                    "barrakaIzena": barrakaIzenaval,
+                    "izarKopurua": izarKopuruaval,
+                    "zergatia": iruzkinakval
+                });
+
+                $.ajax({
+                    url: "balorazioaGehitu.php",
+                    method: "POST",
+                    data: {
+                        "akzioa": "balorazioaGehitu",
+                        "barrakaIzena": barrakaIzenaval,
+                        "izarKopurua": izarKopuruaval,
+                        "zergatia": iruzkinakval
+                    }
+                })
+                    .done(function (baloratu) {
+                        console.log("Zerbitzariaren erantzuna:", baloratu);
+                        var baloratu = JSON.parse(baloratu);
+                        if (baloratu.status === "ok") {
+                            alert("Barraka ondo baloratu da");
+                            window.location.href = "../balorazioa/balorazioa.php";
+                        } else {
+                            alert("Barraka ez da ondo baloratu: " + baloratu.error);
+                        }
+                    })
+                    .fail(function () {
+                        alert("Errorea egon da eskaeran");
+                    });
+            });
+
+
+        });
+    </script>
+
+
 </body>
- 
- 
- 
+
 </html>

@@ -4,22 +4,22 @@ require_once("../db.php");
 
 if (isset($_GET["erabiltzailea"]) && isset($_GET["pasahitza"])) {
     $erabiltzailea = $_GET["erabiltzailea"];
-    $pasahitza = $_GET["pasahitza"];    
+    $pasahitza = $_GET["pasahitza"];
 
     $conn = konexioaSortu();
-    $sql = "SELECT erabiltzailea FROM bezeroa WHERE erabiltzailea=? AND pasahitza=?";
+    $sql = "SELECT idBezeroa,erabiltzailea FROM bezeroa WHERE erabiltzailea=? AND pasahitza=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $erabiltzailea, $pasahitza);
     $stmt->execute();
     $result = $stmt->get_result();
-    
+
     if ($result->num_rows > 0) {
-        $_SESSION['erabiltzailea'] = $erabiltzailea; 
-       
-        echo json_encode(["kopurua" => 1, "redirect" => "sarrera.php"]); 
+        $_SESSION['erabiltzailea'] = $erabiltzailea;
+        $_SESSION['idBezeroa'] = $result->fetch_assoc()['idBezeroa'];
+
+        echo json_encode(["kopurua" => 1, "redirect" => "sarrera.php"]);
     } else {
         echo json_encode(["kopurua" => 0]);
     }
-
 }
 ?>
