@@ -136,9 +136,10 @@ label {
     padding-left: 20px;
 }
 
-#hornitzaileBihurtzekoBotoia {
+#administrazioaSartzekoBotoia {
     padding: 5px;
-    background-color: lightgreen;
+    background-color: #FFFFFF;
+    border: 2px solid #000000
 }
 
 #hornitzaileForm {
@@ -284,6 +285,14 @@ label {
 
 #balorazioaForm {
     text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 40%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(205, 240, 230);
+
 }
 
 .star {
@@ -328,6 +337,25 @@ label {
     font-size: 15px;
     height: 30px;
     width: 90%;
+}
+
+#administrazioForm {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(205, 240, 230);
+}
+
+#administrazioForm>input {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 10px;
 }
 
 @media screen and (min-width: 480px) {
@@ -443,6 +471,14 @@ label {
 
     #baloratuBotoia {
         width: 30%;
+    }
+
+    #administrazioForm {
+        width: 30%;
+    }
+
+    #administrazioForm>input {
+        width: 65%;
     }
 
 }
