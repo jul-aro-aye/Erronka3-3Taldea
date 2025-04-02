@@ -1,54 +1,41 @@
 <?php
-require_once("db.php");
-
-$enpresaIzena = "";
-$kokapena = "";
-$banatzaileKop = "";
-$telefonoa = "";
-$emaila = "";
-
-if ($_POST["akzioa"] == "hornitzaileaGehitu") {
-
+require_once("../db.php");
+ 
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["akzioa"]) && $_POST["akzioa"] === "administrazioaGehitu") {
     $conn = konexioaSortu();
-
-    if (isset($_POST["enpresaIzena"]) && !empty($_POST["enpresaIzena"])) {
-        $enpresaIzena = $_POST["enpresaIzena"];
+ 
+    $enpresarenIzena = isset($_POST["enpresarenIzena"]) ? trim($_POST["enpresarenIzena"]) : '';
+    $proposBarraka = isset($_POST["proposBarraka"]) ? trim($_POST["proposBarraka"]) : '';
+    $barrakaMota = isset($_POST["barrakaMota"]) ? trim($_POST["barrakaMota"]) : '';
+    $telefonoa = isset($_POST["telefonoa"]) ? trim($_POST["telefonoa"]) : '';
+    $emaila = isset($_POST["emaila"]) ? trim($_POST["emaila"]) : '';
+ 
+ 
+    if (empty($enpresarenIzena) || empty($proposBarraka) || empty($barrakaMota) || empty($telefonoa) || empty($emaila)) {
+        echo json_encode(["status" => "ko", "error" => "Eremu guztiak bete behar dira"]);
+        exit();
     }
-
-    if (isset($_POST["kokapena"]) && !empty($_POST["kokapena"])) {
-        $kokapena = $_POST["kokapena"];
+ 
+    $stmt = $conn->prepare("INSERT INTO hornitzaileeskaintza (enpresaIzena, proposBarraka, mota, telefonoa, emaila) VALUES (?, ?, ?, ?, ?)");
+    if (!$stmt) {
+        error_log("SQL errorea: " . $conn->error);
+        echo json_encode(["status" => "ko", "error" => "SQL errorea"]);
+        exit();
     }
-
-    if (isset($_POST["banatzaileKop"]) && !empty($_POST["banatzaileKop"])) {
-        $banatzaileKop = $_POST["banatzaileKop"];
-    }
-
-    if (isset($_POST["telefono"]) && !empty($_POST["telefono"])) {
-        $telefonoa = $_POST["telefono"];
-    }
-
-    if (isset($_POST["emaila"]) && !empty($_POST["emaila"])) {
-        $emaila = $_POST["emaila"];
-    }
-
-    echo $enpresaIzena;
-
-    $kontsulta = "INSERT INTO hornitzailea (enpresaIzena, kokapena, banatzaileKop, telefonoa, emaila, egoera) VALUES ('$enpresaIzena', '$kokapena', '$banatzaileKop', '$telefonoa', '$emaila',\"EzOnartuta\")";
-    $result = $conn->query($kontsulta);
-
-    $egoera = [];
-
-    if ($result === TRUE) {
-        $egoera["status"] = "ok";
+ 
+    $stmt->bind_param("sssss", $enpresarenIzena, $proposBarraka, $barrakaMota, $telefonoa, $emaila);
+    $success = $stmt->execute();
+ 
+    if ($success) {
+        echo json_encode(["status" => "ok"]);
     } else {
-        $egoera["status"] = "ko";
+        error_log("Datuak ezin izan dira gehitu: " . $stmt->error);
+        echo json_encode(["status" => "ko", "error" => "Datuak ezin izan dira gehitu"]);
     }
-
-    if ($egoera["status"] == "ok") {
-        echo json_encode($egoera);
-    } else {
-        echo json_encode($egoera);
-    }
-
+ 
+    $stmt->close();
+    $conn->close();
+} else {
+    echo json_encode(["status" => "ko", "error" => "Eskaera baliogabea"]);
 }
 ?>
