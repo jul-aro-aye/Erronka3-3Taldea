@@ -16,6 +16,7 @@ require_once("../konfigurazioa/layoutTop.php");
     ?>
  
     <title>Erregistroa</title>
+    <link rel="stylesheet" href="erregistroOrria.css">
 </head>
  
 <body>

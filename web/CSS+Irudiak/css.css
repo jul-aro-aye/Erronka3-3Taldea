@@ -358,6 +358,8 @@ label {
     padding: 10px;
 }
 
+
+
 @media screen and (min-width: 480px) {
 
     .header {
@@ -386,10 +388,6 @@ label {
     #zerAurkituLista {
         text-align: center;
         list-style-type: none;
-    }
-
-    #saioaHasiForm {
-        text-align: center;
     }
 
     #euskera {
@@ -438,9 +436,6 @@ label {
         text-align: center;
     }
 
-    #erregistroForm {
-        text-align: center;
-    }
 
     #berrienIrudiak {
         width: 250px;
