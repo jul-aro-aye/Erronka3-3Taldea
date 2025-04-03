@@ -1,5 +1,9 @@
 <?php
 require_once("../header.php");
+require_once("../db.php");
+ 
+$conn = konexioaSortu();
+require_once("../konfigurazioa/layoutTop.php");
 ?>
  
 <html>
@@ -26,6 +30,7 @@ require_once("../header.php");
         <script>
             $(document).ready(function () {
                 erakutsiErosketa();
+ 
                 $("#erosketaBerretsi").click(function () {
                     berretsiErosketa();
                 });
@@ -33,54 +38,58 @@ require_once("../header.php");
  
             function erakutsiErosketa() {
                 let ordainketaEdukia = $("#ordainketa-edukia");
-                let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
-                console.log(karritoa);
+                let erreserba = JSON.parse(localStorage.getItem("barrakaErreserba")) || [];
  
                 ordainketaEdukia.html("");
-                if (karritoa.length === 0) {
-                    ordainketaEdukia.html("<p>Ez dago produkturik karritoan.</p>");
+                if (erreserba.length === 0) {
+                    ordainketaEdukia.html("<p>Ez dago barrakarik erreserban.</p>");
                     return;
                 }
  
                 let guztira = 0;
                 let lista = "<ul>";
-                karritoa.forEach(produktua => {
-                    lista += `<li>${produktua.izena} - $${produktua.prezioa} x ${produktua.kopurua}</li>`;
-                    guztira += produktua.prezioa * produktua.kopurua;
+                erreserba.forEach(barraka => {
+                    lista += `<li>${barraka.izena} - €${barraka.prezioa}</li>`;
+                    guztira += barraka.prezioa;
                 });
                 lista += "</ul>";
-                ordainketaEdukia.html(lista + `<h3>Guztira: $${guztira.toFixed(2)}</h3>`);
+                ordainketaEdukia.html(lista + `<h3>Guztira: €${guztira.toFixed(2)}</h3>`);
             }
  
- 
             function berretsiErosketa() {
-                let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
+                let erreserba = JSON.parse(localStorage.getItem("barrakaErreserba")) || [];
  
-                if (karritoa.length === 0) {
-                    alert("Ez dago produkturik karritoan.");
+                if (erreserba.length === 0) {
+                    alert("Ez dago barrakarik erreserban.");
                     return;
                 }
  
                 $.ajax({
-                    "url": "erosketaBerretsi.php",
-                    "method": "POST",
-                    "data": JSON.stringify({ karritoa })
+                    url: "erosketaBerretsi.php",
+                    method: "POST",
+                    data: JSON.stringify({ erreserba }),
+                    contentType: "application/json",
                 })
                     .done(function (data) {
                         data = JSON.parse(data);
                         if (data.success) {
                             alert("Eskerrik asko zure erosketagatik!");
-                            localStorage.removeItem("karritoa");
+                            localStorage.removeItem("barrakaErreserba");
+                            eguneratuErreserba();
                             window.location.href = "zerbitzuOrria.php";
                         } else {
                             alert("Errorea: " + data.error);
                         }
                     })
                     .fail(function () {
-                        alert("gaizki joan da");
+                        alert("Errorea transakzioan. Saiatu berriro.");
                     });
+            }
  
-            };
+            function eguneratuErreserba() {
+                localStorage.setItem("erreserbaKopurua", "0");
+                window.dispatchEvent(new Event("storage"));
+            }
  
         </script>
     </div>
@@ -90,4 +99,3 @@ require_once("../header.php");
 </body>
  
 </html>
- 
