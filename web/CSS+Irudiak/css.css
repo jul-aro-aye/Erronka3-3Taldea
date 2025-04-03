@@ -395,6 +395,8 @@ label {
 
 
 
+
+
 @media screen and (min-width: 480px) {
 
     .header {
@@ -522,5 +524,7 @@ label {
         height: 38%;
 
     }
+
+    
 
 }

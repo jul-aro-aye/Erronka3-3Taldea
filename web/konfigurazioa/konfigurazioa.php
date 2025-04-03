@@ -26,10 +26,13 @@ $menuColor = isset($config->menuColor) ? (string) $config->menuColor : $defaultM
             <input type="hidden" value="changeConfig" name="action"/>
             <div>
                 <label for="mainColor">Kolore nagusia:</label>
+                <br>
                 <input type="color" id="mainColor" name="mainColor" value="<?= $mainColor ?>" />
             </div>
+            
             <div>
                 <label for="menuColor">Menu kolorea:</label>
+                <br>
                 <input type="color" id="menuColor" name="menuColor" value="<?= $menuColor ?>" />
             </div>
             <br>    
