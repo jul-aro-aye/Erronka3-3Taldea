@@ -32,6 +32,7 @@ $menuColor = isset($config->menuColor) ? (string) $config->menuColor : $defaultM
                 <label for="menuColor">Menu kolorea:</label>
                 <input type="color" id="menuColor" name="menuColor" value="<?= $menuColor ?>" />
             </div>
+            <br>    
             <button type="submit" id="konfigurazioaBotoia">Gorde</button>
         </form>
     </div>
