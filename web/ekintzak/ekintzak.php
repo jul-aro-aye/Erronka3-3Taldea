@@ -33,6 +33,7 @@ $result = $conn->query($sql);
  
                     $ekintzenIrudi = "../CSS+Irudiak/EkintzaIrudiak/" . $row["irudia"];
                     echo "<div class='ekintzek'>";
+                    echo "<br>";
                     echo "<img src='" . $ekintzenIrudi . "' id='ekintzenIrudiak' height='150px' width='220px' alt='" . htmlspecialchars($ekintzenIzenburu) . "'>";
  
                     echo "<br><br>";
