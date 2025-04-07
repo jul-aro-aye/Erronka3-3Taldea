@@ -1,5 +1,4 @@
 <head>
-    <title>Header</title>
     <link rel="stylesheet" href="../header/header.css">
 </head>
 
@@ -13,9 +12,8 @@ require_once "../saioaHasi/session.php";
     </a>
     <div id="aukerak">
         <ul id="nabigazioBarra">
-            <li><a class="produktuak" href="../zerbitzuOrria/zerbitzuOrria.php">Zerbitzuak</a></li><br>
-            <li><a class="hornitzailea" href="../administrazioanSartu/administrazioanSartu.php">Zerbitzu bat duzu?</a>
-            </li><br>
+            <li><a class="produktuak" href="../zerbitzuOrria/zerbitzuOrria.php">Zerbitzuak</a></li>
+            <br>
             <li><a class="ekintza" href="../ekintzak/ekintzak.php">Hurrengo ekintzak</a></li><br>
             <li><a class="ekintza" href="../balorazioa/balorazioa.php">Balorazioak</a></li><br>
             <li><a class="konfigurazioa" href="../konfigurazioa/konfigurazioa.php">Konfigurazioa</a></li>
