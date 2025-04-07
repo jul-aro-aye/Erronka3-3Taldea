@@ -1,3 +1,8 @@
+<head>
+    <title>Header</title>
+    <link rel="stylesheet" href="../header/header.css">
+</head>
+
 <?php
 require_once "../saioaHasi/session.php";
 ?>

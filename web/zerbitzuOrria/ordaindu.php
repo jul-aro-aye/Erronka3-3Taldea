@@ -85,7 +85,8 @@ require_once("../konfigurazioa/layoutTop.php");
                         if (data.success) {
                             alert("Eskerrik asko erreserbatzeagatik!");
                             localStorage.removeItem("barrakaErreserba");
-                            window.location.href = "zerbitzuOrria.php";
+                            erakutsiErosketa();
+                            $("#eIzena").val("");
                         } else {
                             alert("Errorea: " + data.error);
                         }
