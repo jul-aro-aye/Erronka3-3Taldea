@@ -8,27 +8,27 @@ body {
     background-color: var(--mainColor);
     top: 0px !important;
     padding: 0;
-
+ 
 }
-
+ 
 #enpresaIzena {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 36px;
     margin-top: 15px;
 }
-
+ 
 a {
     text-decoration: none;
     color: black;
 }
-
+ 
 #nabigazioBarra {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 #aukerak {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: none;
@@ -42,8 +42,8 @@ a {
     overflow-y: auto;
     background-color: var(--menuColor);
 }
-
-
+ 
+ 
 .header {
     background-color: rgb(237, 218, 160);
     display: grid;
@@ -51,108 +51,108 @@ a {
     position: relative;
     padding-right: 5px;
     background-color: var(--menuColor);
-
-
-
+ 
+ 
+ 
 }
-
+ 
 #nabigazioBarra li {
     margin: 10px 0;
     text-align: center;
 }
-
-
+ 
+ 
 #menua {
     font-size: 50px;
     padding-left: 10%;
 }
-
-
+ 
+ 
 #login {
     font-size: 35px;
     float: right;
 }
-
+ 
 #erregistratu {
     padding-left: 5px;
     font-size: 35px;
 }
-
+ 
 form {
     padding: 20px;
 }
-
+ 
 #erregistroa {
     text-align: center;
 }
-
+ 
 #erregistroForm {
     text-align: center;
 }
-
+ 
 #erregistratuBotoia {
     padding: 5px;
     background-color: #FFFFFF;
     border: 2px solid #000000
 }
-
+ 
 input {
     border: 1px solid black;
     border-radius: 8%;
 }
-
+ 
 label {
     font-size: 16px;
-
+ 
 }
-
+ 
 .kontuak {
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 20px;
 }
-
+ 
 .content-osoa {
     transform: translateY(0) !important;
     transition: none !important;
 }
-
+ 
 #divBotoia {
     text-align: center;
 }
-
+ 
 #saioaBotoia {
     background-color: lightblue;
     height: 30px;
     width: 40%;
 }
-
+ 
 #saioaBotoia2 {
     background-color: #FFFFFF;
     border: 2px solid #000000
 }
-
+ 
 #saioaHasiForm {
     padding-left: 20px;
 }
-
+ 
 #administrazioaSartzekoBotoia {
     padding: 5px;
     background-color: #FFFFFF;
     border: 2px solid #000000
 }
-
+ 
 #hornitzaileForm {
     text-align: center;
-
+ 
 }
-
+ 
 #ekintzak {
     text-align: center;
-
+ 
 }
-
+ 
 #zerbitzuak {
     display: flex;
     flex-wrap: wrap;
@@ -160,16 +160,16 @@ label {
     padding: 20px;
     justify-content: center;
 }
-
+ 
 .ekintza {
     padding: 15px;
 }
-
+ 
 .ekintzek {
     border: 1px solid grey;
 }
-
-
+ 
+ 
 .barraka {
     border: 1px solid #ddd;
     padding: 15px;
@@ -179,24 +179,24 @@ label {
     text-align: center;
     background: #fff;
 }
-
+ 
 .ekintza h3 {
     margin: 0;
     font-size: 18px;
 }
-
-
+ 
+ 
 .barraka h3 {
     margin: 0;
     font-size: 18px;
 }
-
+ 
 .barraka p {
     color: #333;
     font-size: 16px;
     margin: 10px 0 0;
 }
-
+ 
 .footer {
     position: static;
     background-color: rgb(237, 218, 160);
@@ -204,57 +204,57 @@ label {
     text-align: center;
     padding: 4px;
     background-color: var(--menuColor);
-
+ 
 }
-
+ 
 .footer-content {
     font-size: 11.7px;
     text-align: center;
     line-height: 0.6;
 }
-
+ 
 #footerIzenburua {
     font-size: 15px;
     margin-top: 10px;
 }
-
+ 
 .sarreraTitulua1 {
     text-align: center;
 }
-
+ 
 #zerAurkitu {
     text-align: center;
 }
-
+ 
 .sarreraTitulua2 {
     text-align: center;
 }
-
+ 
 #konpromisoa {
     text-align: center;
 }
-
-
+ 
+ 
 .ikonoa {
     font-size: 40px;
     margin: auto;
 }
-
+ 
 #erreserba {
     margin-left: 85%;
     font-size: 20px;
 }
-
+ 
 .zerbitzuEskatu {
     background-color: rgb(224, 227, 224);
     border: 2px solid black;
 }
-
+ 
 #saioaItxiLink {
     color: #3907ea;
     text-decoration: underline;
 }
-
+ 
 #konfigurazioaForm {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -267,7 +267,7 @@ label {
     margin-top: 30px;
     background-color: rgb(205, 240, 230);
 }
-
+ 
 #konfigurazioaBotoia {
     background-color: rgb(248, 250, 251);
     border: 2px solid #000000;
@@ -276,11 +276,11 @@ label {
     height: 30px;
     width: 40%;
 }
-
+ 
 .asterisco {
     color: red;
 }
-
+ 
 #balorazioaForm {
     text-align: center;
     border: 1px solid black;
@@ -290,50 +290,50 @@ label {
     margin: auto;
     margin-top: 30px;
     background-color: rgb(205, 240, 230);
-
+ 
 }
-
+ 
 .star {
     font-size: 30px;
 }
-
+ 
 .star:hover {
     color: gold;
     cursor: pointer;
-
+ 
 }
-
+ 
 #ratingValue {
     display: none;
 }
-
+ 
 #balorazioa {
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
 }
-
+ 
 #barrakaIzena {
     font-size: 20px;
     margin-top: 10px;
 }
-
+ 
 .translate {
     font-size: 12px
 }
-
+ 
 .iruzkina {
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
     width: 90%;
-
+ 
 }
-
+ 
 #iruzkina {
     font-size: 20px;
 }
-
+ 
 #baloratuBotoia {
     background-color: rgb(248, 250, 251);
     border: 2px solid #000000;
@@ -342,7 +342,7 @@ label {
     height: 30px;
     width: 90%;
 }
-
+ 
 #administrazioForm {
     text-align: center;
     border: 1px solid black;
@@ -353,7 +353,7 @@ label {
     margin-bottom: 20px;
     background-color: rgb(205, 240, 230);
 }
-
+ 
 #administrazioForm>input {
     width: 90%;
     height: 30px;
@@ -361,20 +361,20 @@ label {
     border: 1px solid grey;
     padding: 10px;
 }
-
+ 
 #barrakaErreserba-ikonoa {
     position: fixed;
     top: 165px;
     right: 40px;
     font-size: 18px;
 }
-
+ 
 #barrakaErreserba {
     color: rgb(82, 82, 82);
     cursor: pointer;
     font-size: 1.8em;
 }
-
+ 
 #erreserba-kopurua {
     position: absolute;
     top: 0;
@@ -390,98 +390,124 @@ label {
     justify-content: center;
     align-items: center;
 }
-
-
-
-
-
-
-
+ 
+#eskaeraIzena {
+    text-align: center;
+}
+#eskaeraIzena>label {
+    font-size: 20px;
+}
+#ordainketa-edukia {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(205, 240, 230);
+}
+ 
+#erreserba-edukia {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(205, 240, 230);
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 @media screen and (min-width: 480px) {
-
+ 
     .header {
         padding-bottom: 7px;
     }
-
+ 
     #aukerak {
         top: 0px;
         width: 15%;
     }
-
+ 
     #menua {
         font-size: 70px;
     }
-
+ 
     #logoa {
         width: 83px;
         height: 83px;
     }
-
+ 
     #login {
         font-size: 50px;
         justify-content: right;
     }
-
+ 
     #zerAurkituLista {
         text-align: center;
         list-style-type: none;
     }
-
-
+ 
+ 
     .kontuak {
         margin-right: 0;
     }
-
-
+ 
+ 
     #erosketaBotoia {
         background-color: black;
         color: white;
         border-radius: 5px;
     }
-
+ 
     #filtro {
         text-align: center;
     }
-
+ 
     #botoia {
         border-radius: 5px;
         border: 1px solid grey;
     }
-
+ 
     #mota {
         border-radius: 5px;
         border: 1px solid grey;
     }
-
+ 
     .ikonoa {
         font-size: 60px;
         margin-left: 20px;
     }
-
+ 
     #hornitzaileForm {
         text-align: center;
     }
-
-
+ 
+ 
     #berrienIrudiak {
         width: 250px;
         height: 250px;
     }
-
+ 
     #erreserba {
         margin-right: 50px;
         font-size: 30px;
     }
-
+ 
     #ekintzenIrudiak {
         width: 350px;
         height: 250px;
     }
-
+ 
     .translate {
         font-size: 15px
     }
-
+ 
     textarea {
         width: 25%;
         height: 100px;
@@ -489,42 +515,55 @@ label {
         border: 1px solid grey;
         padding: 10px;
     }
-
+ 
     #baloratuBotoia {
         width: 30%;
     }
-
+ 
     #administrazioForm {
         width: 30%;
     }
-
+ 
     #administrazioForm>input {
         width: 65%;
     }
-
+ 
     #barrakaErreserba-ikonoa {
         top: 125px;
         right: 80px;
         font-size: 24px;
     }
-
+ 
     #barrakaErreserba {
         font-size: 2em;
     }
-
+ 
     #erreserba-kopurua {
         font-size: 20px;
         border-radius: 50%;
         width: 23px;
         height: 23px;
     }
-
+ 
     #konfigurazioaForm {
         width: 20%;
         height: 38%;
-
+ 
     }
-
-    
-
+ 
+    #eskaeraIzena {
+        width: 100%;
+    }
+ 
+    #ordainketa-edukia {
+        width: 40%;
+    }
+ 
+    #erreserba-edukia {
+        width: 40%;
+    }
+   
+ 
+   
+ 
 }

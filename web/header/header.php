@@ -101,28 +101,3 @@ require_once "../saioaHasi/session.php";
     }
 </script>
  
-<style>
-    body {
-        top: 0px !important;
-        position: relative !important;
-    }
- 
-    .goog-te-banner-frame {
-        display: none !important;
-        height: 0px !important;
-    }
- 
-    .goog-te-gadget-simple {
-        display: none !important;
-    }
- 
-    iframe {
-        display: none !important;
-    }
- 
-    .header {
-        height: 60px;
-        max-height: 60px;
-        overflow: hidden;
-    }
-</style>

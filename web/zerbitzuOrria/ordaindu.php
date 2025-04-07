@@ -1,5 +1,5 @@
 <?php
-require_once("../header.php");
+require_once("../header/header.php");
 require_once("../db.php");
  
 $conn = konexioaSortu();
@@ -16,7 +16,7 @@ require_once("../konfigurazioa/layoutTop.php");
  
 <body>
     <div class="content-osoa">
-        <h1 id="enpresaIzena">EkoTekno</h1>
+        <h1 id="enpresaIzena">AeroPark</h1>
         <br><br>
         <h2 id="ordainduTitulua">Ordaindu</h2>
         <div id="ordainketa-edukia"></div>
