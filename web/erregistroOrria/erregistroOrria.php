@@ -78,7 +78,7 @@ require_once("../konfigurazioa/layoutTop.php");
                         "abizenak": abizenval,
                         "erabiltzailea": erabiltzaileval,
                         "pasahitza": pasahitzval,
-                        "telefono": telefonoval,
+                        "telefonoa": telefonoval,
                         "emaila": emailval,
                     }
                 })
