@@ -1,6 +1,6 @@
 <?php
-require_once("../header.php");
- 
+require_once("../header/header.php");
+
 require_once("../db.php");
  
 $conn = konexioaSortu();
@@ -16,6 +16,7 @@ require_once("../konfigurazioa/layoutTop.php");
     ?>
  
     <title>Erregistroa</title>
+    <link rel="stylesheet" href="erregistroOrria.css">
 </head>
  
 <body>
@@ -77,7 +78,7 @@ require_once("../konfigurazioa/layoutTop.php");
                         "abizenak": abizenval,
                         "erabiltzailea": erabiltzaileval,
                         "pasahitza": pasahitzval,
-                        "telefono": telefonoval,
+                        "telefonoa": telefonoval,
                         "emaila": emailval,
                     }
                 })

@@ -1,0 +1,29 @@
+#zureErreserbaTitulua {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#erreserba-edukia {
+
+    text-align: center;
+    border: 1px solid #000000;
+    width: 50%;
+    margin: auto;
+}
+
+#erreserba-botoiak {
+    text-align: center;
+}
+
+#erreserbatuBotoia {
+    padding: 5px;
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+@media screen and (min-width: 480px) {}

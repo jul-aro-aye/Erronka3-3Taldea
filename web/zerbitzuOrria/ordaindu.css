@@ -1,5 +1,6 @@
 #ordainduTitulua {
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #ordainketa-edukia {
     text-align: center;
@@ -7,14 +8,17 @@
     width: 50%;
     margin: auto;
 }
-
+ 
 #ordaindu-botoiak {
     text-align: center;
-
+ 
 }
 #erosketaBerretsi {
-    background-color: lightgreen;
+    padding: 5px;
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+    margin-bottom: 15px;    
 }
-
+ 
 @media screen and (min-width: 480px) {
 }

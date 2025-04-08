@@ -1,15 +1,33 @@
 .erregistratuLink {
     color: #3907ea;
     text-decoration: underline;
-   
+ 
 }
+ 
 .erregistratuLink:hover {
     color: #f36417ae;
     text-decoration: underline;
 }
+ 
 p {
     text-align: center;
 }
+ 
+#saioaHasiForm {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(205, 240, 230);
+}
+ 
 @media screen and (min-width: 480px) {
-   
+ 
+    #saioaHasiForm {    
+        width: 27%;
+    }
+ 
 }

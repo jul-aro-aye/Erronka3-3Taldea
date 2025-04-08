@@ -1,8 +1,7 @@
 <?php
  
-require_once("../header.php");
- 
-require_once("../db.php");
+ require_once("../header/header.php");
+ require_once("../db.php");
  
 $conn = konexioaSortu();
 require_once("../konfigurazioa/layoutTop.php");
@@ -10,16 +9,12 @@ require_once("../konfigurazioa/layoutTop.php");
 $modalitatea = isset($_GET['modalitatea']) ? $conn->real_escape_string($_GET['modalitatea']) : '';
 $bilatu = isset($_GET["izenaBilatu"]) ? htmlspecialchars($_GET["izenaBilatu"]) : '';
  
- 
-$sql = "SELECT izena, modalitatea, kapazitatea, prezioa,irudia FROM barraka";
+$sql = "SELECT izena, modalitatea, kapazitatea, prezioa, irudia FROM barraka";
 if (!empty($modalitatea)) {
     $sql .= " WHERE modalitatea = '$modalitatea'";
 }
-   
- 
  
 $emaitza = $conn->query($sql);
- 
  
 ?>
 <html>
@@ -27,7 +22,6 @@ $emaitza = $conn->query($sql);
 <head>
     <?php require_once("../head.php"); ?>
     <title>Zerbitzuak</title>
- 
 </head>
  
 <body>
@@ -48,25 +42,31 @@ $emaitza = $conn->query($sql);
                     echo "<option value='" . htmlspecialchars($modalitateaRow['modalitatea']) . "' $selected>" . htmlspecialchars($modalitateaRow['modalitatea']) . "</option>";
                 }
                 ?>
-            </select>  
+            </select>
             <button id="botoia" type="submit">Bilatu</button>
         </form>
-        <div id="karritoa-ikonoa">
-            <a href="karritoa.php"><i class="fa fa-shopping-cart" id="karritoa"><span
-                        id="karrito-kopurua">0</span></i></a>
+ 
+ 
+        <div id="barrakaErreserba-ikonoa">
+            <a href="barrakaErreserba.php">
+                <i class="fa fa-clipboard-list" id="barrakaErreserba">
+                    <span id="erreserba-kopurua">0</span>
+                </i>
+            </a>
         </div>
+ 
         <div id="zerbitzuak">
             <?php
             if ($emaitza->num_rows > 0) {
                 while ($row = $emaitza->fetch_assoc()) {
                     if (strpos(strtolower($row["izena"]), strtolower($bilatu)) !== false) {
                         $barrakaIzena = $row["izena"];
-                        $barrakaIrudi = "../CSS+Irudiak/BarrakaIrudiak/". $row["irudia"];
+                        $barrakaIrudi = "../CSS+Irudiak/BarrakaIrudiak/" . $row["irudia"];
                         echo "<div class='barraka'>";
                         echo "<img src='" . $barrakaIrudi . "' height='140px' width='160px' alt='" . htmlspecialchars($barrakaIzena) . "'>";
                         echo "<h3>" . htmlspecialchars($row["izena"]) . "</h3>";
-                        echo "<p>Modalitatea: " . htmlspecialchars($row["modalitatea"])."</p>";
-                        echo "<p>Kapazitatea ". htmlspecialchars($row["kapazitatea"]). "</p>";
+                        echo "<p>Modalitatea: " . htmlspecialchars($row["modalitatea"]) . "</p>";
+                        echo "<p>Kapazitatea " . htmlspecialchars($row["kapazitatea"]) . "</p>";
                         echo "<p>Prezioa: €" . number_format($row["prezioa"], 2) . "</p>";
                         echo "<button class='zerbitzuEskatu' data-izena='" . htmlspecialchars($row["izena"]) . "' data-prezioa='" . $row["prezioa"] . "'>Zerbitzua Eskatu</button>";
                         echo "</div>";
@@ -78,29 +78,37 @@ $emaitza = $conn->query($sql);
             ?>
         </div>
     </div>
+ 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function () {
-            function gehituSaskira(izena, prezioa) {
-                let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
-                let aurkitua = karritoa.find(item => item.izena === izena);
-                if (aurkitua) {
-                    aurkitua.kopurua += 1;
+ 
+            function gehituErreserba(izena, prezioa) {
+                let barrakaErreserba = JSON.parse(localStorage.getItem("barrakaErreserba")) || [];
+                let aurkitua = barrakaErreserba.find(item => item.izena === izena);
+ 
+                if (!aurkitua) {
+                    barrakaErreserba.push({ izena: izena, prezioa: prezioa});
+                    localStorage.setItem("barrakaErreserba", JSON.stringify(barrakaErreserba));
+                    eguneratuBarrakaErreserba();
                 } else {
-                    karritoa.push({ izena: izena, prezioa: prezioa, kopurua: 1 });
+                    alert("Barraka hau dagoeneko gehituta dago errserban!");
                 }
-                localStorage.setItem("karritoa", JSON.stringify(karritoa));
-                eguneratuKarritoa();
             }
  
-            function eguneratuKarritoa() {
-                let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
-                let guztira = karritoa.reduce((total, item) => total + item.kopurua, 0);
-                $("#karrito-kopurua").text(guztira);
+            function eguneratuBarrakaErreserba() {
+                let barrakaErreserba = JSON.parse(localStorage.getItem("barrakaErreserba")) || [];
+                let guztira = barrakaErreserba.length;
+                $("#erreserba-kopurua").text(guztira);
             }
  
-            $(document).on("click", ".gehituSaskira", function () {
-                let izena = $(this).data("izena");  // Usamos .data() en lugar de .attr()
+           
+            window.addEventListener("storage", function () {
+                eguneratuBarrakaErreserba();
+            });
+ 
+            $(document).on("click", ".zerbitzuEskatu", function () {
+                let izena = $(this).data("izena");
                 let prezioa = parseFloat($(this).data("prezioa"));
  
                 if (!izena || isNaN(prezioa)) {
@@ -108,20 +116,14 @@ $emaitza = $conn->query($sql);
                     return;
                 }
  
-                gehituSaskira(izena, prezioa);
+                gehituErreserba(izena, prezioa);
             });
  
-            eguneratuKarritoa();
+            eguneratuBarrakaErreserba();
         });
- 
- 
- 
- 
- 
  
     </script>
     <?php require_once("../footer.php"); ?>
 </body>
  
 </html>
- 
