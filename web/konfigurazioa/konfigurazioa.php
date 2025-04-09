@@ -3,7 +3,7 @@ require_once("../header/header.php");
 require_once("../db.php");
 $conn = konexioaSortu();
  
-require_once("../konfigurazioa/layoutTop.php");
+require_once("layoutTop.php");
  
 $defaultMainColor = "#f1f2f9";
 $defaultMenuColor = "#f8f9a9";

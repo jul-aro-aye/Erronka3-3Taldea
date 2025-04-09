@@ -253,6 +253,7 @@ label {
 #saioaItxiLink {
     color: #3907ea;
     text-decoration: underline;
+    font-size: 15px;
 }
  
 #konfigurazioaForm {
@@ -319,7 +320,7 @@ label {
 }
  
 .translate {
-    font-size: 12px
+    font-size: 10px
 }
  
 .iruzkina {
@@ -561,6 +562,10 @@ label {
  
     #erreserba-edukia {
         width: 40%;
+    }
+
+    #saioaItxiLink {
+        font-size: 20px;
     }
    
  
