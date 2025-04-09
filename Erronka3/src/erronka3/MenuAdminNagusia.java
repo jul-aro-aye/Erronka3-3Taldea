@@ -60,7 +60,7 @@ public class MenuAdminNagusia extends JFrame {
 		mnKudeatu.add(mnEkintza);
 		
 		JMenuItem mnEskaera = new JMenuItem("Eskaerak");
-		mnKudeatu.add(mnBezeroa);
+		mnKudeatu.add(mnEskaera);
 		
 		JMenuItem mnHerria = new JMenuItem("Herriak");
 		mnKudeatu.add(mnHerria);
