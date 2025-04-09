@@ -4,8 +4,8 @@ function konexioaSortu()
 {
 
     $zerbitzaria = "localhost";
-    $erab = "root";
-    $pasa = "1MG2024";
+    $erab = "administratzailea";
+    $pasa = "1MG3@2024";
     $dbIzena = "3erronka";
 
     $conn = new mysqli($zerbitzaria, $erab, $pasa, $dbIzena);
