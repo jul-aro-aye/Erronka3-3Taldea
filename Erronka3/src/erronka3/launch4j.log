@@ -1,0 +1,134 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.000.000
+Java max ver:	1.021.000
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Mirari\AppData\Local\Microsoft\WindowsApps;C:\Users\Mirari\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mirari\.dotnet\tools;C:\Program Files\Java\jdk-22\bin
+JRE paths:	;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\Mirari\AppData\Local\Microsoft\WindowsApps;C:\Users\Mirari\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mirari\.dotnet\tools;C:\Program Files\Java\jdk-22\bin
+Check launcher:	C:\Program Files\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\dotnet\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Users\Mirari\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Users\Mirari\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+Check launcher:	C:\Users\Mirari\.dotnet\tools\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Version string: 1.022.000_002 / 64-Bit (Ignore)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\22.0.2
+Version string: 1.022.000_002 / 64-Bit (Ignore)
+Ignore:		1.022.000_002
+32-bit search:	SOFTWARE\JavaSoft\JDK...
+64-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+64-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+32-bit search:	SOFTWARE\IBM\Java2 Runtime Environment...
+64-bit search:	SOFTWARE\IBM\Java Development Kit...
+32-bit search:	SOFTWARE\IBM\Java Development Kit...
+Error msg:	This application requires a Java Runtime Environment 1.0 - 21.0
+
+
+Version:	3.50
+CmdLine:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.000.000
+Java max ver:	
+JRE paths:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src
+Check launcher:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\22.0.2
+Version string: 1.022.000_002 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Match:		1.022.000_002
+Runtime used:	1.022.000_002 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe"
+Args length:	83/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.000.000
+Java max ver:	
+JRE paths:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src
+Check launcher:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\22.0.2
+Version string: 1.022.000_002 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Match:		1.022.000_002
+Runtime used:	1.022.000_002 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe"
+Args length:	83/32768 chars
+Exit code:	0
+
+
+Version:	3.50
+CmdLine:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.000.000
+Java max ver:	
+JRE paths:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src
+Check launcher:	C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\22.0.2
+Version string: 1.022.000_002 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe (OK)
+Match:		1.022.000_002
+Runtime used:	1.022.000_002 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-22\bin\javaw.exe
+Launcher args:	-jar "C:\Users\Mirari\Desktop\Programazioa\Erronka3\src\erronka3\proiektuaJava.exe"
+Args length:	83/32768 chars
+Exit code:	0
